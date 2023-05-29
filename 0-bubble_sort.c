@@ -4,25 +4,22 @@
  * @array: array
  * @size: array size
  */
+void bubble_sort(int *array, size_t size)
+{
 
-void bubble_sort(int *array, size_t size) {
-int swapped;
-for (size_t i = 0; i < size - 1; i++) {
-swapped = 0;
-for (size_t j = 0; j < size - i - 1; j++) {
-if (array[j] > array[j + 1]) {
-int temp = array[j];
-array[j] = array[j + 1];
-array[j + 1] = temp;
-swapped = 1;
-for (size_t k = 0; k < size; k++) {
-printf("%d ", array[k]);
-}
-printf("\n");
-}
-}
-if (!swapped) {
-break;
-}
-}
+	size_t i, index, tmp = 0;
+
+	if (size < 2)
+		return;
+	for (i = 0; i < size; i++)
+		for (index = 0; index < size; index++)
+		{
+			if (array[index] > array[index + 1] && array[index + 1])
+			{
+			tmp = array[index];
+			array[index] = array[index + 1];
+			array[index + 1] = tmp;
+			print_array(array, size);
+			}
+		}
 }
