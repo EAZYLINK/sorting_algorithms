@@ -4,7 +4,6 @@
  * @array: array
  * @size: array size
  */
-#include <stdio.h>
 
 void bubble_sort(int *array, size_t size) {
     int swapped;
